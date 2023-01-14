@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Main function
 void main() {
-  //runApp function obtained from material package runs the class0
+  //runApp function obtained from material package runs the class
   runApp(MyApp());
 }
 
