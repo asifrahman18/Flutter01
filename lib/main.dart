@@ -13,6 +13,10 @@ void main() {
 
 // StatelessWidget class obtained from material package
 class MyApp extends StatelessWidget {
+  void answer() {
+    print('Answer Chosen');
+  }
+
   //Widget return type, build function from material package
   @override
 
@@ -26,9 +30,17 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: [
               Text('Question'),
-              ElevatedButton(onPressed: null, child: Text('Question 1')),
-              ElevatedButton(onPressed: null, child: Text('Question 2')),
-              ElevatedButton(onPressed: null, child: Text('Question 3')),
+              ElevatedButton(onPressed: answer, child: Text('Question 1')),
+              ElevatedButton(
+                  onPressed: () => print('Answer 2 chosen'),
+                  child: Text('Question 2')),
+              ElevatedButton(
+                  onPressed: () {
+                    // ...
+                    // ...
+                    print('Answer 3 chosen');
+                  },
+                  child: Text('Question 3')),
             ],
           )),
     );
