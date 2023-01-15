@@ -22,6 +22,12 @@ class MyApp extends StatelessWidget {
 
   // ctrl + Space brings the list of possible arguments in any function
   Widget build(BuildContext context) {
+    var question = [
+      'What is your favourite color?',
+      'What is your favourtite game?',
+      'What is your favourite country?'
+    ];
+
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -29,18 +35,18 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Text('Question'),
-              ElevatedButton(onPressed: answer, child: Text('Question 1')),
+              Text(question[0]),
+              ElevatedButton(onPressed: answer, child: Text('Option 1')),
               ElevatedButton(
                   onPressed: () => print('Answer 2 chosen'),
-                  child: Text('Question 2')),
+                  child: Text('Option 2')),
               ElevatedButton(
                   onPressed: () {
                     // ...
                     // ...
                     print('Answer 3 chosen');
                   },
-                  child: Text('Question 3')),
+                  child: Text('Option 3')),
             ],
           )),
     );
