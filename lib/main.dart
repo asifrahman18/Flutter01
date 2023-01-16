@@ -3,18 +3,27 @@ import 'package:flutter/material.dart';
 
 // Main function
 void main() {
-  //runApp function obtained from material package runs the class
   runApp(MyApp());
 }
 
 //Alternate way of calling main function
-
 // void main() => runApp(MyApp());
 
-// StatelessWidget class obtained from material package
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State {
+  var questionIndex = 0;
   void answer() {
-    print('Answer Chosen');
+    setState(() {
+      questionIndex = questionIndex + 1;
+    });
+    print(questionIndex);
   }
 
   //Widget return type, build function from material package
@@ -35,7 +44,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Text(question[0]),
+              Text(question[questionIndex]),
               ElevatedButton(onPressed: answer, child: Text('Option 1')),
               ElevatedButton(
                   onPressed: () => print('Answer 2 chosen'),
