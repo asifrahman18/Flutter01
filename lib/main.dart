@@ -1,6 +1,8 @@
 //importing 'flutter material' package
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 // Main function
 void main() {
   runApp(MyApp());
@@ -12,17 +14,17 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State {
-  var questionIndex = 0;
-  void answer() {
+class _MyAppState extends State {
+  var _questionIndex = 0;
+  void _answer() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   //Widget return type, build function from material package
@@ -43,8 +45,8 @@ class MyAppState extends State {
           ),
           body: Column(
             children: [
-              Text(question[questionIndex]),
-              ElevatedButton(onPressed: answer, child: Text('Option 1')),
+              Question(question[_questionIndex]),
+              ElevatedButton(onPressed: _answer, child: Text('Option 1')),
               ElevatedButton(
                   onPressed: () => print('Answer 2 chosen'),
                   child: Text('Option 2')),
