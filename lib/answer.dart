@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final Function select;
+  final select;
 
   Answer(this.select);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      //width: double.infinity,
+      width: double.infinity,
       child: ElevatedButton(
-          onPressed: null,
+          onPressed: select,
           style: ElevatedButton.styleFrom(
-            primary: Colors.amberAccent,
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.blueAccent,
           ),
           child: Text('Option 1')),
     );

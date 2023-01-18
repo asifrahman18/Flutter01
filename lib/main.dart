@@ -36,6 +36,9 @@ class _MyAppState extends State {
     var question = [
       'What is your favourite color?',
       'What is your favourtite game?',
+      'What is your favourite country?',
+      'What is your favourite color?',
+      'What is your favourtite game?',
       'What is your favourite country?'
     ];
 
