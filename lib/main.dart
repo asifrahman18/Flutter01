@@ -56,8 +56,9 @@ class _MyAppState extends State {
           body: Column(
             children: [
               Question(
-                question[_questionIndex],
-                ['questionTxt'],
+                question.forEach((element) {
+                  'questionTxt';
+                }),
               ),
               Answer(_answer),
               Answer(_answer),
