@@ -34,12 +34,18 @@ class _MyAppState extends State {
   // ctrl + Space brings the list of possible arguments in any function
   Widget build(BuildContext context) {
     var question = [
-      'What is your favourite color?',
-      'What is your favourtite game?',
-      'What is your favourite country?',
-      'What is your favourite color?',
-      'What is your favourtite game?',
-      'What is your favourite country?'
+      {
+        'question': 'What is your favourite color?',
+        'answer': ['Red', 'Black', 'White', 'Blue'],
+      },
+      {
+        'question': 'What is your favourite animal?',
+        'answer': ['Rabbit', 'Dog', 'Snake', 'Cat'],
+      },
+      {
+        'question': 'What is your favourite language?',
+        'answer': ['C', 'Java', 'Dart', 'Swift'],
+      },
     ];
 
     return MaterialApp(
