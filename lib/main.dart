@@ -46,6 +46,10 @@ class _MyAppState extends State {
         'questionTxt': 'What is your favourite language?',
         'answer': ['C', 'Java', 'Dart', 'Swift'],
       },
+      {
+        'questionTxt': 'What is your IDE?',
+        'answer': ['VS Code', 'Sublime Text', 'Notepad', 'Atoms'],
+      },
     ];
 
     return MaterialApp(
