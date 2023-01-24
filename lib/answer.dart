@@ -10,12 +10,15 @@ class Answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: ElevatedButton(
-          onPressed: select,
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blueAccent,
-          ),
-          child: Text('Option 1')),
+        onPressed: select,
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.blueAccent,
+        ),
+        child: Text(
+          'Option 1',
+        ),
+      ),
     );
   }
 }
