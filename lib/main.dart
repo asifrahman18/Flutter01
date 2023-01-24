@@ -19,6 +19,7 @@ class MyApp extends StatefulWidget {
   }
 }
 
+// Underscore at the beginning of a name sets anything as private
 class _MyAppState extends State {
   var _questionIndex = 0;
   void _answer() {
