@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import './question.dart';
 import './answer.dart';
+import './quiz.dart';
 
 // Main function
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatefulWidget {
 
 // Underscore at the beginning of a name sets anything as private
 class _MyAppState extends State {
-  final question = const [
+  final _question = const [
     {
       'questionTxt': 'What is your favourite color?',
       'answer': ['Red', 'Black', 'White', 'Blue'],
@@ -46,7 +47,7 @@ class _MyAppState extends State {
     });
     print(_questionIndex);
 
-    if (_questionIndex < question.length) {
+    if (_questionIndex < _question.length) {
       print('We have more questions');
     }
   }
@@ -61,18 +62,8 @@ class _MyAppState extends State {
         appBar: AppBar(
           title: Text('Lit App'),
         ),
-        body: _questionIndex < question.length
-            ? Column(
-                children: [
-                  Question(
-                    question[_questionIndex]['questionTxt'].toString(),
-                  ),
-                  ...(question[_questionIndex]['answer'] as List<String>)
-                      .map((answer) {
-                    return Answer(_answer, answer);
-                  }).toList()
-                ],
-              )
+        body: _questionIndex < _question.length
+            ? Quiz(_answer, _question, _questionIndex)
             : Center(
                 child: Text('You did it!'),
               ),
