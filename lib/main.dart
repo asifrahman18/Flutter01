@@ -1,9 +1,10 @@
 //importing 'flutter material' package
 import 'package:flutter/material.dart';
 
-import './question.dart';
-import './answer.dart';
+// import './question.dart';
+// import './answer.dart';
 import './quiz.dart';
+import './result.dart';
 
 // Main function
 void main() {
@@ -64,9 +65,7 @@ class _MyAppState extends State {
         ),
         body: _questionIndex < _question.length
             ? Quiz(_answer, _question, _questionIndex)
-            : Center(
-                child: Text('You did it!'),
-              ),
+            : Result(),
       ),
     );
   }
