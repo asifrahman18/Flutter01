@@ -21,12 +21,34 @@ class MyApp extends StatefulWidget {
 
 // Underscore at the beginning of a name sets anything as private
 class _MyAppState extends State {
+  final question = const [
+    {
+      'questionTxt': 'What is your favourite color?',
+      'answer': ['Red', 'Black', 'White', 'Blue'],
+    },
+    {
+      'questionTxt': 'What is your favourite animal?',
+      'answer': ['Rabbit', 'Dog', 'Snake', 'Cat'],
+    },
+    {
+      'questionTxt': 'What is your favourite language?',
+      'answer': ['C', 'Java', 'Dart', 'Swift'],
+    },
+    {
+      'questionTxt': 'What is your IDE?',
+      'answer': ['VS Code', 'Sublime Text', 'Notepad', 'Atoms'],
+    },
+  ];
   var _questionIndex = 0;
   void _answer() {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
+
+    if (_questionIndex < question.length) {
+      print('We have more questions');
+    }
   }
 
   //Widget return type, build function from material package
@@ -34,25 +56,6 @@ class _MyAppState extends State {
 
   // ctrl + Space brings the list of possible arguments in any function
   Widget build(BuildContext context) {
-    var question = [
-      {
-        'questionTxt': 'What is your favourite color?',
-        'answer': ['Red', 'Black', 'White', 'Blue'],
-      },
-      {
-        'questionTxt': 'What is your favourite animal?',
-        'answer': ['Rabbit', 'Dog', 'Snake', 'Cat'],
-      },
-      {
-        'questionTxt': 'What is your favourite language?',
-        'answer': ['C', 'Java', 'Dart', 'Swift'],
-      },
-      {
-        'questionTxt': 'What is your IDE?',
-        'answer': ['VS Code', 'Sublime Text', 'Notepad', 'Atoms'],
-      },
-    ];
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
