@@ -26,23 +26,45 @@ class _MyAppState extends State {
   final _question = const [
     {
       'questionTxt': 'What is your favourite color?',
-      'answer': ['Red', 'Black', 'White', 'Blue'],
+      'answer': [
+        {'text': 'Red', 'score': 6},
+        {'text': 'Black', 'score': 8},
+        {'text': 'White', 'score': 4},
+        {'text': 'Blue', 'score': 2}
+      ],
     },
     {
       'questionTxt': 'What is your favourite animal?',
-      'answer': ['Rabbit', 'Dog', 'Snake', 'Cat'],
+      'answer': [
+        {'text': 'Rabbit', 'score': 6},
+        {'text': 'Dog', 'score': 4},
+        {'text': 'Snake', 'score': 8},
+        {'text': 'Cat', 'score': 2}
+      ],
     },
     {
       'questionTxt': 'What is your favourite language?',
-      'answer': ['C', 'Java', 'Dart', 'Swift'],
+      'answer': [
+        {'text': 'C', 'score': 6},
+        {'text': 'Java', 'score': 6},
+        {'text': 'Dart', 'score': 6},
+        {'text': 'Swift', 'score': 6}
+      ],
     },
     {
       'questionTxt': 'What is your IDE?',
-      'answer': ['VS Code', 'Sublime Text', 'Notepad', 'Atoms'],
+      'answer': [
+        {'text': 'VS Code', 'score': 2},
+        {'text': 'Sublime Text', 'score': 4},
+        {'text': 'Notepad++', 'score': 8},
+        {'text': 'Code Blocks', 'score': 6}
+      ],
     },
   ];
   var _questionIndex = 0;
-  void _answer() {
+  var _totalScore = 0;
+  void _answer(int score) {
+    _totalScore += score;
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
